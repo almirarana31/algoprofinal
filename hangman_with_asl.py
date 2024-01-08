@@ -1,4 +1,5 @@
 import random
+import time
 from asl_detector_module import ASLDetector
 
 # dictionaries for hangman categories and guessable words
@@ -38,6 +39,8 @@ while '_' in guessed_word and counter < max_guesses:
 
     # get user input and confirm
     while True:
+        # add a 5 second delay before detecting the next letter
+        time.sleep(5)
         detected_letter = asl_detector.get_letter()
 
         if detected_letter is None:
