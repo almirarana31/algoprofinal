@@ -15,7 +15,8 @@ class ASLDetector:
       self.offset = 20
       self.imgSize = 300
       self.labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-      self.detected_letter = None  # Initialize detected_letter attribute to None
+      # initialize detected_letter attribute to None
+      self.detected_letter = None  
 #function to create frame for data training
   def get_letter(self):
       success, img = self.cap.read()
@@ -74,10 +75,6 @@ class ASLDetector:
   def release(self):
         self.cap.release()
         cv2.destroyAllWindows()
-    #return detected letter for hangman
-#   def get_letter(self):
-#         return self.detected_letter
-#taking trained data from external files
 if __name__ == "__main__":
     model = "C:\\Users\\almir\\Desktop\\final project algopro\\1\\Model\\keras_model.h5"
     labels = "C:\\Users\\almir\\Desktop\\final project algopro\\1\\Model\\labels.txt"

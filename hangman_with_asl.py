@@ -34,12 +34,11 @@ while '_' in guessed_word and counter < max_guesses:
     # printing all the information for the user
     print(f"The category is {chosen_category}")
     print(f"Maximum incorrect guesses: {max_guesses}")
+    print("Please position your hand and wait 5 seconds!")
     print(f"{word_display}")
     print(f"Guessed letters: {' '.join(guessed_letters)}")
-
     # get user input and confirm
     while True:
-        # add a 5 second delay before detecting the next letter
         time.sleep(5)
         detected_letter = asl_detector.get_letter()
 
